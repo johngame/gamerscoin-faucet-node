@@ -1,0 +1,14 @@
+div.well
+
+	div.payouts
+
+		h4!= 'Faucet Info'
+		
+		unless faucet.immediate
+			p.interval= 'Payouts every '+faucet.interval
+
+			if show_next_payout
+				p.next-payout= 'Next payout: '+next_run
+
+			if show_wallet_balance
+				p.wallet-balance= 'Current Balance: '+wallet_balance
